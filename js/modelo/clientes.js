@@ -139,7 +139,7 @@ class Clientes {
         location.href = "login.html";
     }
     construirPoltrona(){
-        let poltrona = this.lerSessao();
+        let poltrona = {};
         poltrona.ocupado = false;//livre
 
         for(let i=0;i<60;i++){

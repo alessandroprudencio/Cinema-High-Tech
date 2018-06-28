@@ -161,7 +161,7 @@ class Sessoes {
 
     //reservas as cadeiras e seta flag false
     construirPoltronas() {
-        let poltrona = this.lerSessao();
+        let poltrona = {};
         poltrona.ocupado = false;//livre
 
         for(let i = 0;i < 60;i++){//cria vetor com 60 posições com a flag false

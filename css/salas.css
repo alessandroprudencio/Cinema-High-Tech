@@ -1,0 +1,98 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    margin-left:1%;
+    margin-top: 4%;
+}
+h2{
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 100;
+    text-align: center;
+    
+}
+h3{
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 100;
+    margin: 0;
+    padding-left: 1%;
+    
+}
+nav{
+    width: 20%;
+    float: left;
+    background-color: #0ddbff;
+    height: 1000px;
+}
+li{
+    padding: 26px;
+}
+nav ul li{
+    list-style: none;
+    font-size: 14pt;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+nav ul{
+    padding: 0;    
+}
+
+nav ul li:hover{
+    background-color: #2B3749;
+}
+main{
+    float: right;
+    width: 80%
+}
+#topo{
+background-color: #2B3749;
+height: 30px;
+padding-top: 30px;
+padding-bottom: 20px;
+}
+
+table {
+    margin-left: 1%;
+    text-align: center;
+    width: 98%;
+    background-color: #2B3749;
+    height: 50px;
+    border-collapse: collapse;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 14pt;    
+}
+
+input{
+    margin: 20px;
+    width: 50%;
+    border: 0;
+    border-bottom: 1px solid black;
+}
+label{
+    margin-left: 1%;
+}
+
+button{
+    margin-left: 1%;
+    background-color: #2B3749;
+    color: white;
+    font-size: 14pt;
+    font-family:Arial, Helvetica, sans-serif;
+    width: 7%;
+    height: 40px;
+    border: none;
+}
+button:hover{
+    background-color:#fd0000;
+}
+a{
+    text-decoration: none;
+    outline: none;
+    color: white;
+}

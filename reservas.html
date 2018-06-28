@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="css/reservas.css">
+    <script src="js/modelo/reservas.js"></script>
+</head>
+
+<body onload="reservas.buscarDados()">
+    <nav>
+        <h2>Cinema High-Tech</h2>
+        <ul>
+            <a href="reservas.html">
+                <li>Reservas</li>
+            </a>
+            <a href="sessoes.html">
+                <li>Sessões</li>
+            </a>
+            <a href="salas.html">
+                <li>Salas</li>
+            </a>
+            <a href="clientes.html">
+                <li>Clientes</li>
+            </a>
+            <a href="filmes.html">
+                <li>Filmes</li>
+            </a>
+        </ul>
+    </nav>
+    <main>
+        <div id="topo">
+            <h3>Gerência de Reservas</h3>
+            <label id="nomeUsuarioLogado"></label>
+            <img src="img/user.svg" id="imgUser" onclick="reservas.esconderBtnSair()" title="Sair">
+            <button id="btnSair" onclick="reservas.sair()">sair</button>
+        </div>
+        <div id="conteudo">
+            <h1>Nova reserva</h1>
+            <div>
+                <label for="inputSessao">Sessão</label>
+                <select id="selectSessao">
+                </select>
+            </div>
+
+            <div>
+                <label for="inputCliente">Cliente</label>
+                <select id="selectCliente">
+
+                </select>
+            </div>
+
+            <fieldset>
+                <legend>Escolha a cadeira</legend>
+                <table>
+                    <thead>
+                        <th></th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>9</th>
+                        <th>10</th>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+
+            </fieldset>
+            <button onclick="reservas.mudarSrcImg()" id="btnReservas">Mostar reservas</button>
+            <button type="button" onclick="reservas.adicionar()">Salvar</button>
+            <button type="button" id="btnsessoesClientes" onclick="reservas.exibirSessoesClientes()">Sessões de Clientes</button>
+            <h1>Reservas Cadastradas</h1>
+            <table>
+                <thead>
+                        <tr>
+                                <td>Sessão</td>
+                                <td>Cliente</td>
+                            </tr>
+                </thead>
+                <tbody id="corpoTabela">
+
+                </tbody>
+                
+
+            </table>
+
+        </div>
+    </main>
+</body>
+
+</html>

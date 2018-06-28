@@ -1,2 +1,1 @@
-# Cinema-Hight-Tech
-projeto-AlessandroPrudencio
+CINEMA-HT

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Filmes</title>
+    <link rel="stylesheet" href="css/filmes.css">
+    <script src="js/modelo/filmes.js"></script>
+</head>
+
+<body onload="filmes.lerDados()">
+    <nav>
+        <h2>Cinema High-Tech</h2>
+        <ul>
+                <a href="reservas.html"><li>Reservas</li></a>
+                <a href="sessoes.html"> <li>Sessões</li></a>
+                <a href="salas.html"> <li>Salas</li></a>
+                <a href="clientes.html"><li>Clientes</li></a>
+                <a href="filmes.html"><li>Filmes</li></a>
+        </ul>
+    </nav>
+    <main>
+        <div id="topo">
+            <h3>Gerência de Filmes</h3>
+            <label id="nomeUsuarioLogado">
+            </label>
+                <img src="img/user.svg" id="imgUser" onclick="filmes.esconderBtnSair()" title="Sair">  
+                <button  id="btnSair" onclick="filmes.sair()">sair</button>
+            
+        </div>
+
+        <div id="conteudo">
+            <h1>Novo filme</h1>
+            <div>
+                <label for="inputNomeFilme">Nome do filme</label>
+                <input type="text" id="inputNomeFilme" placeholder="Nome do filme">
+            </div>
+
+            <div>
+                <label for="inputDuracao">Duração</label>
+                <input type="number" id="inputDuracao" placeholder="Duração do filme">
+            </div>
+
+            <div>
+                <label for="inputClassificacao">Classificação etária</label>
+                <input type="text" id="inputClassificacao" placeholder="ex: 14 anos">
+            </div>
+
+
+            <div>
+                <label for="inputGenero">Genêro</label>
+                <input type="text" id="inputGenero" placeholder="ex: Ação">
+            </div>
+
+            <div>
+                <label for="inputSinopse">Sinopse</label>
+                <textarea id="inputSinopse" cols="70" rows="3" placeholder="Descrição do filme">
+                </textarea>
+            </div>
+
+            <button type="button" onclick="filmes.adicionar()">Salvar</button>
+            <button type="button" onclick="filmes.cancelar()">Cancelar</button>
+
+            <h1>Filmes Cadastrados</h1>
+
+            <div id="divTabela"><! DIV PARA TABELA - CSS{OVERFLOW}!>
+
+            <table>
+                <thead>
+                        <td id="tdFilme">Filme</td>
+                        <td id="tdDuracao">Duração</td>
+                </thead>
+
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+
+        </div><! FECHA DIV PARA TABELA!>
+            
+
+        </div>
+    </main>
+</body>
+
+</html>

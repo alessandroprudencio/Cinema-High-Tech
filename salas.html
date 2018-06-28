@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Salas</title>
+    <link rel="stylesheet" href="css/salas.css">
+    <script src="js/modelo/salas.js"></script>
+</head>
+
+<body>
+    <nav>
+        <h2>Cinema High-Tech</h2>
+        <ul>
+            <li><a href="reservas.html">Reservas</li></a>
+            <li><a href="sessoes.html">Sessões</a></li>
+            <li><a href="salas.html">Salas</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+            <li><a href="filmes.html">Filmes</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div id="topo">
+            <h3>Gerência de Clientes<h3>
+        </div>
+        <div id="conteudo">
+            <h1>Novo filme</h1>
+            <div>
+                <label for="inputNomeFilme">Nome do filme</label>
+                <input type="text" id="inputNomeFilme" placeholder="Nome do filme">
+            </div>
+
+            <div>
+                <label for="inputDuracao">Duração</label>
+                <input type="number" id="inputDuracao" placeholder="Duração do filme">
+            </div>
+
+            <div>
+                <label for="inputClassificacaoEtaria">Classificação etária</label>
+                <input type="text" id="inputClassificacaoEtaria" placeholder="ex: 14 anos">
+            </div>
+
+
+            <div>
+                <label for="inputGenero">Genêro</label>
+                <input type="text" id="inputGenero" placeholder="ex: Ação">
+            </div>
+
+            <div>
+                <label for="inputSinopse">Sinopse</label>
+                <input type="text" id="inputSinopse" placeholder="Sinopse do filme">
+            </div>
+
+
+            <button type="button">Salvar</button>
+            <button type="button">Cancelar</button>
+
+            <h1>Filmes Cadastrados</h1>
+            <table>
+                <tr>
+                    <td>Filme</td>
+                    <td>Duração</td>
+                </tr>
+            </table>
+
+        </div>
+    </main>
+</body>
+
+</html>

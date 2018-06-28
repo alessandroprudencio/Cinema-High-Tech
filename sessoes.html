@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sessões</title>
+    <link rel="stylesheet" href="css/sessoes.css">
+    <script src="js/modelo/sessoes.js"></script>
+</head>
+
+<body onload="sessoes.lerFilme()">
+    <nav>
+        <h2>Cinema High-Tech</h2>
+        <ul>
+            <a href="reservas.html"><li>Reservas</li></a>
+            <a href="sessoes.html"> <li>Sessões</li></a>
+            <a href="salas.html"> <li>Salas</li></a>
+            <a href="clientes.html"><li>Clientes</li></a>
+            <a href="filmes.html"><li>Filmes</li></a>
+        </ul>
+    </nav>
+    <main>
+        <div id="topo">
+            <h3>Gerência de Sessões</h3>
+            <label id="nomeUsuarioLogado">as</label>  
+            <img src="img/user.svg" id="imgUser" onclick="sessoes.esconderBtnSair()" title="Sair">  
+            <button  id="btnSair" onclick="sessoes.sair()">sair</button>         
+        </div>
+        <div id="conteudo">
+            <h1>Nova sessão</h1>
+            <div>
+                <label for="inputFilmeSessao">Filme da sessão</label>
+                <select id="inputFilmeSessao">
+                    <option value="" hidden="hidden">Selecione o filme</option>
+                </select>
+                <label id="NaoAFilme"></label>
+            </div>
+
+            <div>
+                <label for="inputSalaSessao">Sala da sessão</label>
+                <select id="inputSalaSessao">
+                    <option hidden="hidden">Selecione a sala</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
+                    <option>F</option>  
+                </select>
+            </div>
+
+            <div>
+                <label for="inputDubladoLegendado">Dublado/Legendado</label>
+                <select id="inputDubladoLegendado">
+                    <option hidden="hidden">Dublado/Legendado</option>
+                    <option>Dublado</option>
+                    <option>Legendado</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="input3D2D">3D/2D</label>
+                <select id="input3D2D">
+                    <option hidden="hidden">Selecione 3D/2D</option>
+                    <option>3D</option>
+                    <option>2D</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="inputData">Data da sessão</label>
+                <input type="date" id="inputData">
+            </div>
+
+            <div>
+                <label for="inputHorario">Horario de Inicio</label>
+                <input type="time" id="inputHorario">
+            </div>
+
+            <button type="button" onclick="sessoes.adicionar()">Salvar</button>
+            <button type="button">Cancelar</button>
+
+            <span id="exibi">
+
+            </span>
+
+            <h1>Sessões Cadastradas</h1>
+            <table>
+                <thead>
+                    <td>Filme</td>
+                    <td>Data</td>
+                    <td>Inicio</td>
+                    <td>Dublado/Legendado</td>
+                    <td>Sala</td>
+                    <td>3D/2D</td>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </div>
+    </main>
+</body>
+
+</html>

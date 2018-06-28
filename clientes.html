@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="css/clientes.css">
+    <script src="js/modelo/clientes.js"></script>
+</head>
+
+<body onload="clientes.lerDados()">
+    <nav>
+        <h2>Cinema High-Tech</h2>
+        <ul>
+                <a href="reservas.html"><li>Reservas</li></a>
+                <a href="sessoes.html"> <li>Sessões</li></a>
+                <a href="salas.html"> <li>Salas</li></a>
+                <a href="clientes.html"><li>Clientes</li></a>
+                <a href="filmes.html"><li>Filmes</li></a>
+        </ul>
+    </nav>
+    <main>
+
+        <div id="topo"> 
+            <h3>Gerência de Clientes</h3> 
+            <label id="nomeUsuarioLogado"></label>
+            <img src="img/user.svg" id="imgUser" onclick="clientes.esconderBtnSair()" title="Sair">  
+            <button  id="btnSair" onclick="clientes.sair()">sair</button>
+        </div>
+
+        <h1>Novo cliente</h1>
+        <div>
+            <label for="inputCliente">Nome do cliente</label>
+            <input type="text" id="inputCliente" placeholder="Nome do cliente">
+        </div>
+
+        <div>
+            <label for="inputIdade">Idade do cliente</label>
+            <input type="text" id="inputIdade" placeholder="Idade do cliente">
+        </div>
+
+        <div>
+            <label for="inputEmail">Email do cliente</label>
+            <input type="text" id="inputEmail" placeholder="Email do cliente">
+        </div>
+
+        <button type="button" onclick="clientes.adicionar()">Salvar</button>
+        <button type="button">Cancelar</button>
+
+        <h1> Clientes Cadastrados </h1>
+
+        <div id="divTabela"><! DIV PARA TABELA - CSS{OVERFLOW}!>
+
+            <table id="tabela">
+                <thead id="cabeçalhoTabela">
+                    <tr>
+                        <td id="tdNome">Nome</td>
+                        <td id="tdIdade">Idade</td>
+                        <td id="tdEmail">Email</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+
+        </div><! FECHA DIV PARA TABELA!>
+        
+    </main>
+</body>
+
+</html>

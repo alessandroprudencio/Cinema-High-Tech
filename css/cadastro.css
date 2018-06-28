@@ -1,0 +1,51 @@
+body{
+    background-image: url("/home/alessandro/Documentos/CINEMA-HT/img/fundoLogin.jpeg");
+}
+#areaLogin{
+    height: 647px;
+    width: 58%;
+    background-color: white;
+    margin-left: 26%;
+    margin-top:7%;
+}
+#container{
+    text-align: center;
+}
+img{
+    margin-left: 35%;
+    width: 26%;
+    padding-bottom:10px; 
+}
+h1{
+    font-family:Arial, Helvetica, sans-serif; 
+    font-weight: 100;
+}
+button{
+    margin-top: 1%;
+    margin-bottom: 2%;
+    width: 30%;
+    cursor: pointer;
+    background-color: #2B3749;
+    color: white;
+    font-size: 15pt;
+    font-family:Arial, Helvetica, sans-serif;
+    border: none;
+    height: 50px;
+}
+
+button:hover{
+    background-color:#fd0000;
+}
+input{
+    padding-left: 8px;
+    margin:2%;
+    width: 70%;
+    border: 0;
+    border-bottom: 1px solid black;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+}
+a{
+    color: #2B3749;
+    text-decoration: none;
+}

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <title>Filmes</title>
@@ -10,33 +11,32 @@
     <nav>
         <h2>Cinema High-Tech</h2>
         <ul>
-                <a href="filmes.html">
-                    <li>Filmes</li>
-                </a>
-                <a href="sessoes.html">
-                    <li>Sessões</li>
-                </a>
-                <a href="clientes.html">
-                    <li>Clientes</li>
-                </a>
-    
-                <a href="reservas.html">
-                    <li>Reservas</li>
-                </a>
-            </ul>
+            <a href="filmes.html">
+                <li>Filmes</li>
+            </a>
+            <a href="sessoes.html">
+                <li>Sessões</li>
+            </a>
+            <a href="clientes.html">
+                <li>Clientes</li>
+            </a>
+
+            <a href="reservas.html">
+                <li>Reservas</li>
+            </a>
+        </ul>
     </nav>
     <main>
         <div id="topo">
             <h3>Gerência de Filmes</h3>
-            <label id="nomeUsuarioLogado">
-            </label>
-                <img src="img/user.svg" id="imgUser" onclick="filmes.esconderBtnSair()" title="Sair">  
-                <button  id="btnSair" onclick="filmes.sair()">sair</button>
-            
+            <label id="nomeUsuarioLogado"> </label>
+            <img src="img/user.svg" id="imgUser" onclick="filmes.esconderBtnSair()" title="Sair">
+            <button id="btnSair" onclick="filmes.sair()">sair</button>
         </div>
 
         <div id="conteudo">
             <h1>Novo filme</h1>
+
             <div>
                 <label for="inputNomeFilme">Nome do filme</label>
                 <input type="text" id="inputNomeFilme" placeholder="Nome do filme">
@@ -69,24 +69,19 @@
 
             <h1>Filmes Cadastrados</h1>
 
-            <div id="divTabela"><! DIV PARA TABELA - CSS{OVERFLOW}!>
-
-            <table>
-                <thead>
+            <div id="divTabela"><! DIV PARA TABELA - NECESSARIO PARA FAZER  - CSS{OVERFLOW}!>
+                <table>
+                    <thead>
                         <td id="tdFilme">Filme</td>
                         <td id="tdDuracao">Duração</td>
-                </thead>
+                    </thead>
 
-                <tbody id="tbody">
+                    <tbody id="tbody">
 
-                </tbody>
-            </table>
-
-        </div><! FECHA DIV PARA TABELA!>
-            
-
+                    </tbody>
+                </table>
+            </div><! FECHA DIV PARA TABELA!>
         </div>
     </main>
 </body>
-
 </html>

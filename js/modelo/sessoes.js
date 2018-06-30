@@ -42,9 +42,9 @@ class Sessoes {
 
     carregarFilme() {
         let select = document.getElementById("inputFilmeSessao");
-        for (let i = 0; i < this.lista.length; i++) {// JA ESTOU DENTRO DO ARRRAY FILMES , AI ELE ANDA 
-            let opcaoSelect = document.createElement("option"); // TEM QUE CRIAR OPCAO SELECT AQUI DENTRO PRA ELE IR PERCORRENDO E SETANDO TODOS DO ARRAY E NAO APENAS UM
-            opcaoSelect.innerHTML += this.lista[i].nome;//SELECT SEMPRE VAI RECEBER DO ARRAY FILMES O VALOR DE FILMES TODOS
+        for (let i = 0; i < this.lista.length; i++) {
+            let opcaoSelect = document.createElement("option"); 
+            opcaoSelect.innerHTML += this.lista[i].nome;
 
             select.appendChild(opcaoSelect);
         }

@@ -12,9 +12,9 @@ class Reservas {
         this.lista = JSON.parse(localStorage.getItem("Sessoes"));
 
         let select = document.getElementById("selectSessao");
-        for (let i = 0; i < this.lista.length; i++) {// JA ESTOU DENTRO DO ARRRAY FILMES , AI ELE ANDA 
-            let opcaoSelect = document.createElement("option"); // TEM QUE CRIAR OPCAO SELECT AQUI DENTRO PRA ELE IR PERCORRENDO E SETANDO TODOS DO ARRAY E NAO APENAS UM
-            opcaoSelect.innerHTML += this.lista[i].filme + ", " + this.lista[i].data + ", " + this.lista[i].horario + ", " + this.lista[i].dubladoLegendado + ", " + this.lista[i].tresDdoisD;//SELECT SEMPRE VAI RECEBER DO ARRAY FILMES O VALOR DE FILMES TODOS
+        for (let i = 0; i < this.lista.length; i++) {
+            let opcaoSelect = document.createElement("option"); 
+            opcaoSelect.innerHTML += this.lista[i].filme + ", " + this.lista[i].data + ", " + this.lista[i].horario + ", " + this.lista[i].dubladoLegendado + ", " + this.lista[i].tresDdoisD;
             opcaoSelect.id = i;
             select.appendChild(opcaoSelect);
         }
@@ -57,11 +57,11 @@ class Reservas {
         let tbody = document.getElementById("tbody");
         tbody.innerHTML = "";
 
-        let id = 0;//vai ser incrementada sempre que entrar no for
-        for (let f = 0; f < 6; f++) //f == 0 é o A, f==1 é o b // for das linhas
+        let id = 0;
+        for (let f = 0; f < 6; f++)
         {
             let linha = tbody.insertRow();
-            //cria variavel que vai representar o nome da fileira
+            
             let nomeFileira = "";
             if (f == 0) {
                 nomeFileira = "A";
@@ -102,7 +102,7 @@ class Reservas {
                     colunaPoltrona.innerText = "F";
                 }
                 else {
-                    id++;//incrementa
+                    id++;
                     let img = document.createElement("img");
                     img.src = "img/verde.svg";
                     img.id = id;
@@ -116,17 +116,17 @@ class Reservas {
         }
     }
     reservar(id) {
-        let sessaoSelecionada = document.getElementById("selectSessao").selectedIndex; //sessao que o cara seleciono vem com id
+        let sessaoSelecionada = document.getElementById("selectSessao").selectedIndex; 
         let clienteSelecionado = document.getElementById("selectCliente").selectedIndex;
         for (let i = 0; i < this.lista.length; i++) {
             if (sessaoSelecionada == i) {
-                //se o select selecionado for igual i 
+           
                 this.lista[i].poltronas[id].ocupado = true;
-                localStorage.setItem("Sessoes", JSON.stringify(this.lista));//joga dados novamente local storage com a flag atualizada
+                localStorage.setItem("Sessoes", JSON.stringify(this.lista));
             }
             if (clienteSelecionado == i) {
                 this.lista[i].poltronas[id].ocupado = true;
-                localStorage.setItem("Sessoes", JSON.stringify(this.lista));//joga dados novamente local storage com a flag atualizada
+                localStorage.setItem("Sessoes", JSON.stringify(this.lista));
             }
         }
         this.mudarSrcImg();
@@ -136,8 +136,8 @@ class Reservas {
         let sessaoSelecionada = document.getElementById("selectSessao").selectedIndex;
         let clienteSelecionado = document.getElementById("selectCliente").selectedIndex;
         for (let i = 0; i < 60; i++) {
-            if (this.lista[sessaoSelecionada].poltronas[i].ocupado && this.lista[clienteSelecionado].poltronas[i].ocupado) {//se a sessao n posicao i selecionada , .cadeiras nessa posicao ela esta ocupada
-                let img = document.getElementById(i);//pega a imagem com a id de nome i pega a imagem com o i
+            if (this.lista[sessaoSelecionada].poltronas[i].ocupado && this.lista[clienteSelecionado].poltronas[i].ocupado) {
+                let img = document.getElementById(i);
                 img.src = "img/vermelha.svg"
             }
         }

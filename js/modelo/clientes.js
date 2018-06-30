@@ -35,8 +35,10 @@ class Clientes {
         let nomeUsuario = JSON.parse(localStorage.getItem("Usuario"));
         document.getElementById("nomeUsuarioLogado").innerHTML = "Olá " + nomeUsuario.nome + ", seja bem vindo!";
     }
+
     alertaParaEntradaSemLogin() {
         let usuario = JSON.parse(localStorage.getItem("Usuario"))
+        
         if (usuario == null) {
             alert("OPS! PARECE QUE VOCÊ ESTÁ TENDO ACESSAR UMA PÁGINA SEM FAZER LOGIN." + "\n" + "POR FAVOR FAÇA SEU LOGIN PRIMEIRO!");
             window.location.href = "login.html";
@@ -66,6 +68,7 @@ class Clientes {
 
         this.cancelar();
     }
+
     construirTabela() {
         let tabela = document.querySelector("tbody");
         tabela.innerHTML = "";
@@ -98,6 +101,7 @@ class Clientes {
             this.Eedicao = null
         }
     }
+
     excluir(i) {
         let mensagem = window.confirm("Tem certeza que deseja excluir:" + " " + this.lista[i].nome);
 
@@ -109,6 +113,7 @@ class Clientes {
             return;
         }
     }
+
     editar(i) {
         document.getElementById("inputCliente").value = this.lista[i].nome;
         document.getElementById("inputIdade").value = this.lista[i].idade;
@@ -116,14 +121,17 @@ class Clientes {
 
         this.Eedicao = true;
     }
+
     cancelar() {
         document.getElementById("inputCliente").value = "";
         document.getElementById("inputIdade").value = "";
         document.getElementById("inputEmail").value = "";
     }
+
     salvarEdicao(i) {
         this.lista.splice(i, 1);
     }
+
     esconderBtnSair() {
         document.getElementById("btnSair").classList.remove("esconderBtn");
         this.contadordeclicks++;
@@ -135,9 +143,11 @@ class Clientes {
             document.getElementById("btnSair").classList.remove("esconderBtn");
         }
     }
+
     sair() {
         location.href = "login.html";
     }
+
     construirPoltrona(){
         let poltrona = {};
         poltrona.ocupado = false;//livre

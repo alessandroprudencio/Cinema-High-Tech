@@ -3,7 +3,6 @@ class Filmes {
         this.lista = [];
         this.Eedicao = null;
         this.contadordeclicks = 0;
-
     }
     lerFilme() {
         let filme = {};
@@ -35,13 +34,13 @@ class Filmes {
         }
         this.nomeUsuarioLogado();
     }
+
     alertaParaEntradaSemLogin() {
         let usuario = JSON.parse(localStorage.getItem("Usuario"))
         if (usuario == null) {
             alert("OPS! PARECE QUE VOCÊ ESTÁ TENDO ACESSAR UMA PÁGINA SEM FAZER LOGIN." + "\n" + "POR FAVOR FAÇA SEU LOGIN PRIMEIRO!");
             window.location.href = "login.html";
         }
-
     }
 
     adicionar() {
@@ -72,9 +71,9 @@ class Filmes {
             this.construirTabela();
         }
     }
-
         this.cancelar();
     }
+
     construirTabela() {
         let tabela = document.querySelector("tbody");
         tabela.innerHTML = "";
@@ -101,9 +100,9 @@ class Filmes {
             colunaEditar.appendChild(imgEditar);
 
             this.Eedicao = null;
-
         }
     }
+
     excluir(i) {
         let mensagem = window.confirm("Tem certeza que deseja excluir:" + " " + this.lista[i].nome);
 
@@ -115,6 +114,7 @@ class Filmes {
             return;
         }
     }
+
     editar(i) {
         this.Eedicao = true;
         document.getElementById("inputNomeFilme").value = this.lista[i].nome;
@@ -123,10 +123,11 @@ class Filmes {
         document.getElementById("inputGenero").value = this.lista[i].genero;
         document.getElementById("inputSinopse").value = this.lista[i].sinopse;
     }
+
     salvarEdicao(i) {
         this.lista.splice(i, 1);
-
     }
+
     cancelar() {
         document.getElementById("inputNomeFilme").value = "";
         document.getElementById("inputDuracao").value = "";
@@ -134,6 +135,7 @@ class Filmes {
         document.getElementById("inputGenero").value = "";
         document.getElementById("inputSinopse").value = "";
     }
+
     esconderBtnSair() {
         document.getElementById("btnSair").classList.remove("esconderBtn");
         this.contadordeclicks++;
@@ -145,10 +147,10 @@ class Filmes {
             document.getElementById("btnSair").classList.remove("esconderBtn");
         }
     }
+
     sair() {
         location.href = "login.html";
     }
-        
 }
 let filmes = new Filmes();
 

@@ -108,11 +108,8 @@ class Reservas {
                     img.id = id;
                     img.setAttribute("onclick", "reservas.reservar(" + id + ")");
                     colunaPoltrona.appendChild(img);
-
                 }
-
             }
-
         }
     }
     reservar(id) {
